@@ -1,0 +1,64 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="src/sass/reset.css">
+      <link rel="stylesheet" href="src/sass/style.css">
+      <link rel="stylesheet" href="src/sass/dot.css">
+      <link rel="stylesheet" href="dist/bundle.css">
+      <link rel="icon" href="./src/assets/img/logo.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Music</title>
+    </head>
+    <body class="music-body">
+          <header class="intro">
+            <nav>
+              <a class="white-nav navbar" href="index.html">Home</a>
+              <a class="active-nav navbar" href="music.html">Music</a>
+              <a class="white-nav navbar" href="about.html">About</a>
+            </nav>
+          </header>
+            <h1><span class="hide">Music</span></h1>
+          <main class="main-songpage">
+            <div class="player-div">
+              <button class="playBig"><img src="/src/assets/img/icons/play.svg" alt="play" width=200></button>
+              <div>
+                <div class="titleandvolume-container">
+                  <p class="songtitle-big">Hazard</p>
+                  <div class="volume-container">
+                    <audio class="audioo" src="./src/assets/audio/hazard.wav"></audio>
+                    <img class="volume" src="./src/assets/img/icons/volume.svg" alt="volume">
+                    <input type="range" name="volume" class="player__slider" min="0" max="1" step="0.01" value="1">
+                  </div>
+                </div>
+                <div class="muziekbalk">
+                  <div class="progress">
+                    <div class="progress__filled"></div>
+                  </div>
+                </div>
+                <!-- <p class="song-description">This is a song about lonelyness. is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p> -->
+                <div class="wrap">
+                  <div class="read-more" onclick="this.classList.add('expanded')">
+                    <div class="content">
+                      <p class="song-description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc</p>
+                    </div>
+                    <span class="trigger">+ read more</span>
+                  </div>
+                </div>     
+              </div> 
+            </div>
+
+
+            <div class="song-container">
+              <ul class="song-list">
+                <li class="song container">
+                  <div class="buttonAndTitel">
+                </li>
+              </ul>
+            </div>
+          </main>
+          <!-- <script src="src/javascript/script.js"></script> -->
+          <script src="src/javascript/arrayScript.js"></script>
+    </body>
+    </html>

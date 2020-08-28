@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-Copy-4" transform="translate(-176.000000, -213.000000)">
+            <g id="Group-3" transform="translate(179.000000, 216.000000)">
+                <circle id="Oval" stroke="#FF3467" stroke-width="6" cx="97" cy="97" r="97"></circle>
+                <path d="M113.69084,71.454199 L143.277285,122.490817 C144.939211,125.357639 143.96245,129.028914 141.095628,130.69084 C140.181333,131.220866 139.143263,131.5 138.086445,131.5 L78.9135546,131.5 C75.5998461,131.5 72.9135546,128.813708 72.9135546,125.5 C72.9135546,124.443182 73.1926883,123.405113 73.7227146,122.490817 L103.30916,71.454199 C104.971086,68.5873772 108.642361,67.610616 111.509183,69.2725416 C112.414141,69.7971554 113.166226,70.5492402 113.69084,71.454199 Z" id="Triangle" fill="#FF3467" transform="translate(108.500000, 97.000000) rotate(-270.000000) translate(-108.500000, -97.000000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

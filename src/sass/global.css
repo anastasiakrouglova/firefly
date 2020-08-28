@@ -1,0 +1,17 @@
+.primair-btn {
+    color: white;
+    text-decoration: none;
+    background-color: #FF3467;
+    padding: 2rem 4rem;
+    border-radius: 4rem;
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  .primair-btn:hover {
+    background-color: #D12852;
+  }

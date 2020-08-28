@@ -1,0 +1,36 @@
+.read-more {
+  position: relative;
+  color: #34495e;
+  text-decoration: none;
+  cursor: text;
+}
+.read-more .trigger {
+  position: absolute;
+  bottom: 4;
+  padding-top: 2rem;
+  cursor: pointer;
+  color: #FF3467;
+  font-weight: bold;
+}
+.read-more .content {
+  position: relative;
+  overflow: hidden;
+  max-height: 179.2px;
+  transition: max-height 2s ease-in-out;
+}
+.read-more .content::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 89.6px;
+  transition: opactiy 2s ease-in-out, visibility 2s ease-in-out;
+}
+.read-more.expanded .content {
+  max-height: 1000rem;
+}
+.read-more.expanded .content::before,
+.read-more.expanded .trigger {
+  opacity: 0;
+  visibility: hidden;
+}

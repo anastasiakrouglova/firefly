@@ -1,0 +1,49 @@
+[
+
+  { 
+    "id": "1" ,
+    "title": "Hazard" ,
+    "song": "hazard",
+    "artist": "Accumulation",
+    "genre": "indie",
+    "isplaying": false,
+    "desc": "Hazard is a dialogue with a child."
+  },
+  {
+    "id": "2" ,
+    "title": "Lonely Tree" ,
+    "song": "lonelyTree",
+    "artist": "Accumulation",
+    "genre": "rock",
+    "isplaying": false,
+    "desc": "Lonely Tree is a song about lonelyness."
+  },
+  {
+    "id": "3" ,
+    "title": "One Day" ,
+    "song": "oneDay",
+    "artist": "Accumulation",
+    "genre": "indie",
+    "isplaying": false,
+    "desc": "One day is a random song when we were high."
+  },
+  {
+    "id": "4" ,
+    "title": "People Of War" ,
+    "song": "peopleOfWar",
+    "artist": "Accumulation",
+    "genre": "rock",
+    "isplaying": false,
+    "desc": "People of war is a song that tries everyone to convince not fight."
+  },
+  {
+    "id": "5" ,
+    "title": "The Walker" ,
+    "song": "theWalker",
+    "artist": "Accumulation",
+    "genre": "indie",
+    "isplaying": false,
+    "desc": "The walker is a poetic interpretation based on the philosophy of Heraclitus, who said that no man ever steps in the same river twice. </br></br>Lyrics </br>Like a boat at the jetty where it’s berthed </br>Northern storm, wind rushes, you don’t hear my voice </br>The nuts lay untouched in the foreign fields </br>In front of the black-green fortress in the sea</br></br>You can never come down twice </br>Everything still passes by </br>The water keeps to seep away </br>It doesn’t touch you anyway </br> </br>Down the riverside </br> </br>Awake at night you hear the stars</br>Punching in their stables in the sky</br>You hear their voice, you want to run</br>Just to the black-green fortress in the sea</br></br>You can never come down twice</br>Everything still passes by</br>The water keeps to seep away</br>It doesn’t touch you anyway</br></br>Down the riverside</br></br>You can never come down twice</br>Come down twice</br>Everything still passes by</br>Passes by ahaa ahaa"
+  }
+
+]
