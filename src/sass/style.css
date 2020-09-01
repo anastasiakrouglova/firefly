@@ -52,9 +52,15 @@ canvas {
   flex-direction: column;
   align-items: center;
   height: 100vh;
-  background-image: url("../assets/img/testbg.jpg");
+  /* background-image: url("../assets/img/testbg.jpg");
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: fixed; */
+}
+
+.current{
+  color: white;
+  letter-spacing: 0.2rem;
+  opacity: 0.8;
 }
 
 nav {
@@ -80,19 +86,42 @@ nav > a {
 }
 
 .footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: mix(#3f3251, #002025, 70%);
-  background-image: -moz-linear-gradient(45deg, #3f3251 2%, #002025 100%);
-  background-image: -webkit-linear-gradient(45deg, #3f3251 2%, #002025 100%);
-  background-image: linear-gradient(45deg, #3f3251 2%, #002025 100%);
-  background-position: center;
-  background-attachment: fixed;
-  /* height: 100vh; */
+  height: 100vh;
   color: white;
   height: 100vh;
   position: relative;
+  z-index: 1;
+  grid-gap: 2rem;
+  display: grid;
+  grid-template-rows: 6rem 1fr 1fr 2rem;
+  grid-template-columns: 10% 30% auto 30% 10% ;
+  grid-template-areas:  ". . . . ."
+  ". donate . contact ."
+  ". donate . music ."
+}
+
+.donate__article {
+  grid-area: donate;
+}
+
+.contact__article {
+  grid-area: contact;
+}
+
+.music__article {
+  grid-area: music;
+}
+
+.text__footer {
+  line-height: 2.9rem;
+  font-size: 1.6rem;
+  opacity: 0.8;
+  margin-top: 2rem;
+}
+
+.card-image__footer {
+  margin-left: -2rem;
+  margin-top: 3rem;
 }
 
 section {
@@ -100,7 +129,6 @@ section {
   z-index: 1;
   background-color: white;
 }
-
 
 .footer-div_sm {
   display: flex;
@@ -122,7 +150,6 @@ section {
 .footer-div_sm > a:hover {
   opacity: 1;
 }
-
 
 .div_sm {
   display: flex;
@@ -148,7 +175,7 @@ section {
 .headertext-div {
  display: flex;
  position: relative;
- top: 25%;
+ top: 35%;
  flex-direction: column;
  align-items: center;
 }
@@ -156,21 +183,17 @@ section {
 .header-btn {
   z-index: 2;
   position: relative;
-  top: 37%;
+  top: 45%;
 }
 
 .section1-header {
   height: 100vh;
 }
 
-
-
 .broodtekst-style {
   line-height: 3rem;
   margin-bottom: 4rem;
 }
-
-
 
 .accumulation_homepage__title {
   font-family: 'Montserrat';
@@ -180,7 +203,6 @@ section {
   margin-bottom: 2rem;
   letter-spacing: 0.9rem;
 }
-
 
 .firefly-title_h2 {
   font-family: 'Montserrat';
@@ -261,16 +283,81 @@ section {
   justify-content: center;
 }
 
+.italic {
+  font-style: italic;
+}
+
+.underline {
+  border-bottom: 0.2rem solid #2b2b2b
+}
+
+.artist_div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 9rem;
+}
+
+.artist__name {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  font-size: 1.5rem;
+  max-width: 15rem;
+  text-align: center;
+  line-height: 2.2rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+
+.artist__thanks {
+  margin-top: 10rem;
+  margin-bottom: 4rem;
+  font-size: 1.3rem;
+  max-width: 60rem;
+  text-align: center;
+  line-height: 3rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  padding: 2rem 3rem;
+  border: 0.1rem solid #2b2b2b;
+}
+
+.thanks_bold {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.artist__qualities::before {
+  content:"";
+  background-color: black;
+  width: 0.1rem;
+  height: 2rem;
+  position: absolute;
+  top: -3rem;
+  left: 50%;
+}
+
+.artist__qualities {
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 300;
+  line-height: 2.2rem;
+  text-align: center;
+  font-size: 1.3rem;
+  letter-spacing: 0.1rem;
+  opacity: 0.8;
+}
+
 .accum-intro {
   font-family: 'Montserrat';
   font-weight: 500;
   padding: 8rem 0rem;
   line-height: 4.6rem;
   text-align: center;
-  max-width: 60rem;
-  font-size: 3rem;
-  /* border-top: 0.2rem solid #BFBFBF;
-  border-bottom: 0.2rem solid #BFBFBF; */
+  max-width: 63rem;
+  font-size: 2.7rem;
 }
 
 .acc-introsection {
@@ -281,6 +368,13 @@ section {
   height: 100vh;
 }
 
+.acc-artistsection {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 80rem;
+}
 
 .quote{
   color: #ececec;
@@ -341,6 +435,34 @@ section {
  flex-direction: column;
  align-items: center;
  padding-top: 4rem;
+}
+
+.artists_container {
+  max-width: 90rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "alexander maxim nastya sergey";
+  grid-gap: 6rem;
+}
+
+.alexander {
+  grid-area: alexander;
+}
+.maxim {
+  grid-area: maxim;
+}
+.nastya {
+  grid-area: nastya;
+}
+.sergey {
+  grid-area: sergey;
+}
+
+.linkdotted {
+  color: #2b2b2b;
+  text-decoration: none;
+  border-bottom: 0.1rem solid blue;
 }
 
 .progress__filled {
@@ -449,7 +571,6 @@ section {
   animation-direction: alternate;
 }
 
-
 @keyframes balk {
   to{
     height: 4rem;
@@ -510,7 +631,6 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   background: #FF3467;
 }
 
-
 .africaCont{
   display: flex;
   flex-direction: column;
@@ -545,10 +665,6 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   align-items: flex-end;
   width: 40rem;
 }
-
-
-
-
 
 .li-songs {
   display: flex;
@@ -585,13 +701,6 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 .songtitle{
   padding-left: 2rem;
   padding-top: 1rem;
-}
-
-
-
-
-.time{
-
 }
 
 .timeDiv{
@@ -700,9 +809,7 @@ strong{
     animation: shrink-bounce 200ms;
   }
 
-
 /* SLIDESHOW */
-
 .slideshow-container{
   max-width: 100rem;
   position: relative;
@@ -769,11 +876,6 @@ top: 0;
   background-color: #717171;
 }
 
-/* .active > h2 {
-  background-color: #717171;
-  color: red;
-} */
-
 .button-play  {
 	color: black;
 	background-color: transparent;
@@ -788,7 +890,6 @@ top: 0;
 .button-play:focus {
   outline: transparent;
 }
-
 
 .subtitle-song{
   font-weight: bold;
@@ -817,8 +918,6 @@ top: 0;
   to {opacity: 1}
 }
 
-
-
 .accum-quote::before {
   content: "";
   height: 0.1rem;
@@ -829,7 +928,6 @@ top: 0;
   background-color: black;
   
 }
-
 
 @media only screen and (max-width: 414px) {
   .accumulation_homepage__title{
@@ -853,6 +951,7 @@ top: 0;
 
   .cover-img {
     width: 80vw;
+    margin-top: 4rem;
   } 
 
   .broodtekst-style {
@@ -861,7 +960,7 @@ top: 0;
   }
 
   .section-firefly {
-    height: 170vh;
+    height: 110rem;
     column-gap: 4rem;
     row-gap: 6rem;
     grid-template-columns: 1fr;
@@ -871,6 +970,15 @@ top: 0;
     "description";
     text-align: center;
     padding: 1rem;
+  }
+
+  .article__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 30rem;
+    margin: auto;
   }
 
   .nav_onepager {
@@ -889,7 +997,6 @@ top: 0;
      display: none;
    }
 
-
    .div_sm {
     display: flex;
     justify-content: center;
@@ -900,6 +1007,82 @@ top: 0;
     padding-bottom: 3rem;
     bottom: 2rem;
     position: absolute;
+  }
+
+  .footer {
+    height: 130rem;
+    color: white;
+    position: relative;
+    z-index: 1;
+    grid-gap: 0;
+    display: grid;
+    grid-template-rows: 6rem auto auto auto 2rem;
+    grid-template-columns: 1rem 1fr 1rem;
+    grid-template-areas:  ". . ."
+    ". donate ."
+    ". contact ."
+    ". music .";
+  }
+
+
+.card-image__footer {
+  margin-left: 0;
+  margin-top: 3rem;
+}
+
+.music__article {
+  margin-top: 6rem;
+}
+
+.artists_container {
+  max-width: 60rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "alexander"
+  "maxim"
+  "nastya"
+  "sergey";
+  grid-gap: 10rem;
+}
+
+.artist_div {
+  margin-top: 1rem;
+}
+
+.acc-artistsection {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 220rem;
+}
+}
+
+
+@media only screen and (max-width: 319px) {
+  .footer {
+    height: 130rem;
+    color: white;
+    position: relative;
+    z-index: 1;
+    grid-gap: 0;
+    display: grid;
+    grid-template-rows: 6rem auto auto auto 2rem;
+    grid-template-columns: 0.5rem 1fr 0.5rem;
+    grid-template-areas:  ". . ."
+    ". donate ."
+    ". contact ."
+    ". music .";
+  }
+
+  .card-image__footer {
+    width: 90vw;
+  }
+
+  .copyright {
+    text-align: center;
+    line-height: 2rem;
   }
 }
 
@@ -928,8 +1111,53 @@ top: 0;
     text-align: center;
     padding: 1rem;
   }
-}
 
+  .footer {
+    height: 120rem;
+    color: white;
+    position: relative;
+    z-index: 1;
+    grid-gap: 2rem;
+    display: grid;
+    grid-template-rows: 6rem 1fr 1fr 1fr 2rem;
+    grid-template-columns: 5% 1fr 5% ;
+    grid-template-areas:  ". . ."
+    ". donate ."
+    ". contact ."
+    ". music ."
+  }
+
+  .article__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 30rem;
+    margin: auto;
+  }
+
+  .artists_container {
+    max-width: 90rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "alexander maxim "
+    "nastya sergey";
+    grid-gap: 10rem;
+  }
+
+  .artist_div {
+    margin-top: 1rem;
+  }
+
+  .acc-artistsection {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 120rem;
+  }
+}
 
 @media only screen and (max-width: 830px) and (min-width: 415px) {
   .accumulation_homepage__title{
@@ -1001,7 +1229,6 @@ top: 0;
   grid-area: songs;
 }
 
-
 .music-body {
   height: 100%;
   background: mix(#3f3251, #002025, 70%);
@@ -1009,7 +1236,6 @@ top: 0;
   background-image: -webkit-linear-gradient(45deg, #3f3251 2%, #002025 100%);
   background-image: linear-gradient(45deg, #3f3251 2%, #002025 100%);
 }
-
 
 .main-songpage {
   margin: 0 auto;
@@ -1021,14 +1247,12 @@ top: 0;
   margin-top: 10rem;
 }
 
-
 .songtitle-big {
   font-family: 'Montserrat';
   font-weight: 600;
   color: white;
   font-size: 3rem;
 }
-
 
 .song-description {
   color:white;
@@ -1037,7 +1261,6 @@ top: 0;
   line-height: 2.3rem;
   max-width: 50rem;
 }
-
 
 .song-image {
   border-radius: 50%;
@@ -1052,7 +1275,6 @@ top: 0;
   color: white;
 }
 
-
 .song-list{
   display: flex;
   flex-direction: row;
@@ -1060,6 +1282,23 @@ top: 0;
   flex-wrap: wrap;
 }
 
+.sm-div__footer {
+  margin-top: 3rem;
+}
+
+.sm-div__footer > a {
+  margin-right: 2rem;
+  opacity: 0.8;
+  transition: 0.2s opacity;
+}
+
+.sm-div__footer > a:hover {
+  opacity: 1;
+}
+
+.sm-a__footer > img {
+  margin-bottom: 2rem;
+}
 
 .volume {
   padding-bottom: 0.4rem;
@@ -1076,7 +1315,6 @@ top: 0;
   align-items: center;
 }
 
-
 .about-header {
   height: 70vh;
   background-image: url('/src/assets/img/photos/group.jpg');
@@ -1086,7 +1324,6 @@ top: 0;
 .about-nav {
   height: 3rem;
 }
-
 
 .pink-bg_btn {
   width: 6rem;
@@ -1100,22 +1337,15 @@ top: 0;
   width: 25rem;
 }
 
+.contact-mail__footer {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-top: 3rem;
+}
 
-/* .youtube-btn {
-  text-decoration: none;
-  color: white;
-  text-decoration: none;
-  background-color: #FF3467;
-  padding: 2rem 6rem;
-  border-radius: 4rem;
-  text-transform: uppercase;
-  font-family: 'Montserrat';
-  font-weight: 600;
-  font-size: 1.2rem;
-  letter-spacing: 0.1rem;
-  transition: background-color 0.2s ease-in-out;
-} */
-
+.number__footer {
+  margin-top: 2rem;
+}
 
 .release_div {
   position: absolute;
@@ -1151,7 +1381,6 @@ top: 0;
   margin-left: 0.2rem;
 }
 
-
 .copyright {
   background-color: white;
   color: #08222C;
@@ -1162,13 +1391,12 @@ top: 0;
   position: absolute;
   bottom: 0;
   width: 100%;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 .copyright > h2 {
   opacity: 0.7
 }
-
 
 .h2_footer {
   color: #B6ACFF;
@@ -1176,8 +1404,9 @@ top: 0;
   text-transform: uppercase;
   margin-bottom: 1rem;
   font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 3rem;
 }
-
 
 .nav_onepager {
   z-index: 3;

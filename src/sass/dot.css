@@ -393,7 +393,10 @@
     display: none; }
   
   body {
-    background: #f2f2f2; }
+    background: mix(#3f3251, #002025, 70%);
+    background-image: -moz-linear-gradient(45deg, #3f3251 2%, #002025 100%);
+    background-image: -webkit-linear-gradient(45deg, #3f3251 2%, #002025 100%);
+    background-image: linear-gradient(45deg, #3f3251 2%, #002025 100%) }
   
   section {
     width: 100%;
