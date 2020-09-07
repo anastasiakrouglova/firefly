@@ -35,7 +35,7 @@
             <div class="div-header-home">
                 <div class="headertext-div">
                     <h3 class="accumulation_homepage__title">Accumulation</h3>
-                    <h4 class="homeHeader-text">A Belgian band that writes music with meaning</h4>
+                    <h4 class="homeHeader-text">A belgian band that writes music with meaning</h4>
                 </div>
                 <a class="primair-btn header-btn" href="#songs">Discover our music</a>
                 <div class="div_sm">
@@ -51,7 +51,7 @@
         <section id="firefly" class="acc-introsection">
             <h2 class="hide">About us</h2>
             <p>WHO WE ARE</p>
-            <p class="accum-intro">Accumulation is a Belgian band that released their first album <span class="italic">Firefly</span> on <span >31 October 2020</span>. A game of poetry creates a double foundation for almost every song. It’s up to you to find the meaning, or just to enjoy.</p>
+            <p class="accum-intro">Accumulation is a Belgian band that released their first album <span >Firefly</span> on <span >31 October 2020</span>. A game of poetry creates a double foundation for almost every song. It’s up to you to find the meaning, or just to enjoy.</p>
             <p class="accum-quote">Accumulation</p>
         </section>
         <!-- <section id ="firefly" class="section-firefly">
@@ -73,76 +73,108 @@
             <article class="screen">
                 <input type="checkbox" value="None" id="magicButton" name="check" />
                 <label class="main" for="magicButton"></label>
-                <div class="coverImage"></div>
-                <div class="bodyPlayer"></div>
+                <div class="coverImage"><img class="cover-single" src="/src/assets/img/covers/square/oneDay.jpg" alt="oneDay"></div>
+                <!-- <img class="image-cover" src="/src/assets/img/covers/oneDayTest.png" alt="hazard" width=200 height=200> -->
+                <div class="bodyPlayer">
+                </div>
                 <table class="list">
                 </table>                              
                 <div class="shadow"></div>                             
                 <div class="bar"></div>                              
-                <div class="info">
+                <div class="info">    
                     <h4 class="music_title"></h4>
-                    <h3 class="music_subtitle">accumulation -- Firefly</h3>
-                </div>        
+                    <h3 class="music_subtitle">“Thoughts are like candles, the wax will disappear"</h3>
+                </div>   
                     <table class="player">
                         <td><input type="checkbox" id="backward" onclick="toggleBackward()"/><label class="backward" for="backward"></label></td>
                         <td><input type="checkbox" id="play" title="Play" onclick="togglePlayPause()"/><label class="play" for="play"></label></td>
                         <td><input type="checkbox" id="forward" onclick="toggleForward()"/><label class="forward" for="forward"></label></td>
-                    </table>                             
+                    </table>                          
                     <table class="footer-player">
-                        
                         <td><a target="_blank" href=""><img src="/src/assets/img/icons/spotify.svg" alt="spotify" height=22></a></td>
                         <td><a target="_blank" href="https://www.youtube.com/c/Accumulation/videos"><img src="/src/assets/img/icons/youtube.svg" alt="youtube" height=20></a></td>
                         <td><a target="_blank" href="https://soundcloud.com/user-957302753?fbclid=IwAR2HCjV3Vfb7-Znb4SzMvQhOuXCEakeQrywWt6UYgXTkSVuhkLYX-m8XUYU"><img src="/src/assets/img/icons/soundcloud.svg" alt="soundcloud" height=20></a></td>
-                        <td><a target="_blank" href=""><img src="/src/assets/img/icons/bandcamp.svg" alt="bandcamp" height=15></a></td>
+                        <!-- <td><a target="_blank" href=""><img src="/src/assets/img/icons/bandcamp.svg" alt="bandcamp" height=15></a></td> -->
                     </table>                              
-                    <div class="current"><h2>FIREFLY</h2></div>              
+                    <div class="current"><p>FIREFLY</p></div>              
                 </article>
         </section>
         <section id="band" class="acc-artistsection">
-            <h2 class="hide">THE ARTISTS</h2>
-            <p>THE ARTISTS</p>
-            <div class="artists_container">
+            <h2 class="hide">The artists</h2>
+            <p class="theArtists">THE ARTISTS</p>
+            <article class="artists_container">
                 <div class="artist_div">
                     <img src="/src/assets/img/photos/alexander.jpg" alt="alexander" width=150>
-                    <p class="artist__name alexander">Alexander Mykhailov</p>
-                    <p class="artist__qualities">Vocal </br> Guitar </br> Drum </p>
+                    <h3 class="artist__name alexander">Alexander Mikhaylov</h3>
+                    <p class="artist__qualities">Vocal </br> Guitar </br> Drums </p>
                 </div>
                 <div class="artist_div">
                     <img src="/src/assets/img/photos/maxim.jpg" alt="alexander" width=150>
-                    <p class="artist__name maxim">Maxim Krouglov</p>
+                    <h3 class="artist__name maxim">Maxim Krouglov</h3>
                     <p class="artist__qualities">Bass </br> Fretless bass </p>
                 </div>
                 <div class="artist_div">
                     <img src="/src/assets/img/photos/nastya.jpg" alt="alexander" width=150>
-                    <p class="artist__name nastya">Anastasia Krouglova</p>
-                    <p class="artist__qualities">Vocal </br> Keyboard </br> Violin </br> <a class="linkdotted" target="_blanc" href="https://anastasiakrouglova.be/">Digital Artist</a></p>
+                    <h3 class="artist__name nastya">Anastasia Krouglova</h3>
+                    <p class="artist__qualities">Vocal </br> Keyboard </br> Violin</p>
+                    
                 </div>
                 <div class="artist_div">
                     <img src="/src/assets/img/photos/sergey.jpg" alt="alexander" width=150>
-                    <p class="artist__name sergey">Sergey Steenackers</p>
-                    <p class="artist__qualities">Vocal </br> Guitar </br> Synthesizer </br> Mixing Engineer</p>
+                    <h3 class="artist__name sergey">Sergey Steenackers</h3>
+                    <p class="artist__qualities">Vocal </br> Guitar </br> Synthesizer </p>
                 </div>
-            </div>
-            <div>
-                <p class="artist__thanks"><span class="thanks_bold">Special thanks to:</span> </br>
-                Matvey Pogrebkov and Armen-Levon Manseryan ❤️</p>
-            </div>
+            </article>
+            <article class="credits_container">
+                <h3 class="hide">Credits</h3>
+                <input class="credits__input" type="checkbox" id="credits" name="credits" onclick="toggleCredits()">
+                <label class="credits__label" for="credits">Show credits</label>            
+                <!-- <label class="credits__label" for="credits">Show credits <img class="dropdown" src="/src/assets/img/icons/down.svg" alt=""></label>       -->
+                <div class="credits_info credit_false">
+                    <article class="recordings">
+                        <h4 class="h4__title">Additional recordings by</h4>
+                        <p class="name_credits">Matvey Pogrebkov (drums)</p>
+                        <p class="name_credits">Denis Krouglov (cello)</p>
+                    </article>
+                    <article class="thanks">
+                        <h4 class="h4__title">Special thanks to</h4>
+                        <p class="name_credits">Armen-Levon Manaseryan</p>
+                    </article>
+                    <article class="mixed">
+                        <h4 class="h4__title">Engineered & mixed by</h4>
+                        <p class="name_credits">Sergey Steenackers</p>
+                    </article>
+                    <article class="artwork">
+                        <h4 class="h4__title">Artwork & design by</h4>
+                        <p class="name_credits">Anastasia Krouglova</p>
+                        <a class="portfolio-link" target="_blanc" href="https://anastasiakrouglova.be/">Portfolio</a>
+                    </article>
+                    <div class="copyrightinfo__div">
+                        <p class="infoCopyright">All music and lyrics written by Accumulation, except ‘Goodbye’, written by Yuri Mikhaylov and arranged by Accumulation. Lyrics used by permission.</p>
+                        <p class="infoCopyright">© & ℗ 2020 Accumulation</p>
+                    </div>
+                </div>
+            </article>
         </section>
 
     <footer id="contact" class="footer">
         <article class="donate__article article__footer">
             <h2 class="h2_footer">Donate</h2>
             <p class="text__footer">We are collecting money to buy an acoustic drumset 🥁 and better equipment.
-                Feel free to support us and to donate a free sum on this account number 👇</p>
-            <script src="https://www.paypal.com/sdk/js?client-id=sb"></script>
-            <script>paypal.Buttons().render('body');</script>
-            <img class="card-image__footer" src="/src/assets/img/card.png" alt="card" width=300>
+                Feel free to support us by buying our album on Apple Music, Bandcamp or google Music! 👇</p>
+            <!-- <script src="https://www.paypal.com/sdk/js?client-id=sb"></script>
+            <script>paypal.Buttons().render('body');</script> -->
+            <!-- <img class="card-image__footer" src="/src/assets/img/card.png" alt="card" width=300> -->
+            <div class="sm-div__footer">
+                <a class="sm-a__footer" target="_blank" href=""><img src="/src/assets/img/icons/bandcamp.svg" alt="bandcamp" height=15></a>
+                <a class="sm-a__footer" target="_blank" href=""><img src="/src/assets/img/icons/itunes.svg" alt="iTunes" height=20></a>
+            </div>  
         </article>
         <article class="contact__article article__footer">
             <h2 class="h2_footer">Contact us</h2>
             <p class="text__footer">Send us some hugs, kind messages or offers for concerts ❤️</p>
             <p class="contact-mail__footer">contact@accumulation.be</p>
-            <p class="contact-mail__footer number__footer">0489 / 43 34 14</p>
+            <p class="contact-mail__footer number__footer">+32 489 433 414</p>
         </article>
         <!-- <article class="footer-div_sm"> -->
         <article class="music__article article__footer">

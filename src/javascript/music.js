@@ -3,10 +3,14 @@
     let activeSong;
     let $audioIsActive;
     let currentSongName = "Hazard";
+    let currentQuote = "You don't have to be afraid, all those shadows are nothing but a dream.";
+    let currentSongImage = "hazard"
 
     const playpause = document.getElementById("play");
     const songlist = document.querySelector(`.list`);
     const $currentSongname = document.querySelector(`.music_title`);
+    const $currentQuote = document.querySelector(`.music_subtitle`);
+    const $currentSongImage = document.querySelector(`.coverImage`);
 
     function togglePlayPause() {
         
@@ -93,7 +97,6 @@
         ` <td class="nr"><h5>${song.id}<h5></td>
         <td class="title"><h6 class="songtitle">${song.title}<h6></td>
         <td class="length"><h5>${song.duration}<h5></td>
-        <td><input type="checkbox" id="heart"/><label class="zmr" for="heart"></label></td>
         <td><audio onended="checkIfEnded()" preload="auto" id="audio" class="activeAudio"><source src="src/assets/audio/${song.song}.wav"></audio></td>
         `
 
@@ -115,7 +118,12 @@
 
         activeSong = $activeAudio;
         currentSongName = song.title;
+        currentQuote = song.desc;
+        currentSongImage = song.song;
+
         $currentSongname.innerHTML = currentSongName;
+        $currentQuote.innerHTML = currentQuote;
+        $currentSongImage.innerHTML = `<img class="cover-single" src="/src/assets/img/covers/square/${currentSongImage}.jpg" alt="${currentSongImage}">`
 
         if ($activeAudio.play) {
             playStatus = document.getElementById(`play`)
@@ -148,9 +156,6 @@
     }
 
     function showSonglist(songs) {
-
-        
-
         songs.forEach(song => {
             const $tr = document.createElement(`tr`);
 
@@ -161,7 +166,6 @@
                 ` <td class="nr"><h5>${song.id}<h5></td>
               <td class="title"><h6 class="songtitle">${song.title}<h6></td>
               <td class="length"><h5>${song.duration}<h5></td>
-              <td><input type="checkbox" id="heart"/><label class="zmr" for="heart"></label></td>
               <td><audio onended="checkIfEnded()" preload="auto" id="audio" class="not-activeAudio" controls><source src="src/assets/audio/${song.song}.wav"></audio></td>
               `
         
@@ -186,6 +190,8 @@
 
     const showCurrentSongname = () => {
         $currentSongname.innerHTML = currentSongName;
+        $currentQuote.innerHTML = currentQuote;
+        $currentSongImage.innerHTML = `<img class="cover-single" src="/src/assets/img/covers/square/${currentSongImage}.jpg" alt="${currentSongImage}">`
     }
 
     const initFetch = () => {
@@ -199,10 +205,31 @@
           });
     }
 
+    function toggleCredits () {
+        const creditCheck = document.querySelector(`.credits__input`);
+        const creditInfo = document.querySelector(`.credits_info`);
+        const creditLabel = document.querySelector(`.credits__label`);
+        //console.log('qmlsjfqlms');
 
-const init = () => {
+        if (creditCheck.checked) {
+            creditInfo.classList.remove(`credit_false`);
+            creditInfo.classList.add(`credit_true`);
+            // creditLabel.innerHTML = `hide credits <img class="dropdown" src="/src/assets/img/icons/up.svg" alt="">`
+            creditLabel.innerHTML = `hide credits`
+        } else {
+            creditInfo.classList.add(`credit_false`);
+            creditInfo.classList.remove(`credit_true`);
+            creditLabel.innerHTML = `show credits`
+            // creditLabel.innerHTML = `show credits <img class="dropdown" src="/src/assets/img/icons/down.svg" alt="">`
+        }
+    }
+
+
+    const init = () => {
+    console.log('hey code stalker x');
     initFetch();
     showCurrentSongname();
+        
   };
   init();
 }

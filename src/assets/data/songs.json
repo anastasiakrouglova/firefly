@@ -7,7 +7,8 @@
     "artist": "Accumulation",
     "genre": "indie",
     "isplaying": false,
-    "desc": "Hazard is a dialogue with a child."
+    "duration": "00:30",
+    "desc": "You don't have to be afraid, all those shadows are nothing but a dream."
   },
   {
     "id": "2" ,
@@ -16,7 +17,8 @@
     "artist": "Accumulation",
     "genre": "rock",
     "isplaying": false,
-    "desc": "Lonely Tree is a song about lonelyness."
+    "duration": "00:30",
+    "desc": "Thoughts are like candles, the wax will disappear"
   },
   {
     "id": "3" ,
@@ -25,7 +27,8 @@
     "artist": "Accumulation",
     "genre": "indie",
     "isplaying": false,
-    "desc": "One day is a random song when we were high."
+    "duration": "00:30",
+    "desc": "Early in the morning, surrounded by petrichor."
   },
   {
     "id": "4" ,
@@ -34,7 +37,8 @@
     "artist": "Accumulation",
     "genre": "rock",
     "isplaying": false,
-    "desc": "People of war is a song that tries everyone to convince not fight."
+    "duration": "00:30",
+    "desc": "Give your souls to the darkness and sour, because it cannot be worthy much more"
   },
   {
     "id": "5" ,
@@ -43,7 +47,48 @@
     "artist": "Accumulation",
     "genre": "indie",
     "isplaying": false,
-    "desc": "The walker is a poetic interpretation based on the philosophy of Heraclitus, who said that no man ever steps in the same river twice. </br></br>Lyrics </br>Like a boat at the jetty where it’s berthed </br>Northern storm, wind rushes, you don’t hear my voice </br>The nuts lay untouched in the foreign fields </br>In front of the black-green fortress in the sea</br></br>You can never come down twice </br>Everything still passes by </br>The water keeps to seep away </br>It doesn’t touch you anyway </br> </br>Down the riverside </br> </br>Awake at night you hear the stars</br>Punching in their stables in the sky</br>You hear their voice, you want to run</br>Just to the black-green fortress in the sea</br></br>You can never come down twice</br>Everything still passes by</br>The water keeps to seep away</br>It doesn’t touch you anyway</br></br>Down the riverside</br></br>You can never come down twice</br>Come down twice</br>Everything still passes by</br>Passes by ahaa ahaa"
+    "duration": "00:30",
+    "desc": "The nuts lay untouched in the foreign fields, in front of the black-green fortress in the sea"
+  },
+  {
+    "id": "6" ,
+    "title": "Azalea" ,
+    "song": "azalea",
+    "artist": "Accumulation",
+    "genre": "indie",
+    "isplaying": false,
+    "duration": "00:30",
+    "desc": "No warmth, no breath shall testify, their existence is untold"
+  },
+  {
+    "id": "7" ,
+    "title": "Black Snow" ,
+    "song": "blackSnow",
+    "artist": "Accumulation",
+    "genre": "indie",
+    "isplaying": false,
+    "duration": "00:30",
+    "desc": "Everything around me stays the same, only I can make things change"
+  },
+  {
+    "id": "8" ,
+    "title": "Goodbye" ,
+    "song": "goodbye",
+    "artist": "Accumulation",
+    "genre": "indie",
+    "isplaying": false,
+    "duration": "00:30",
+    "desc": "We are loosing each other at the pass of winds"
+  },
+  {
+    "id": "9" ,
+    "title": "Intro" ,
+    "song": "intro",
+    "artist": "Accumulation",
+    "genre": "indie",
+    "isplaying": false,
+    "duration": "00:30",
+    "desc": "Have you ever heard the Pipe, who’s calling all the peasants of our town?"
   }
 
 ]
