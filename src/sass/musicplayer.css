@@ -193,6 +193,9 @@ h5 {
 }
 
 @media only screen and (max-width: 900px) {
+  .music__link {
+    margin: 2rem;
+  }
 
 .screen > #magicButton:checked ~ .info h4 {
   text-align: left;
@@ -236,7 +239,7 @@ h5 {
   }
 
   .screen > #magicButton:checked ~ .player {
-    bottom: 25px;
+    bottom: 40px;
     left: 0;
     transform: scale(0.6, 0.6);
     transition: all 0.3s ease-in;
@@ -262,7 +265,7 @@ h5 {
 }
 
 .screen > #magicButton:checked ~ .list {
-  top: 192px;
+  top: 205px;
   left: 0;
   opacity: 1;
   visibility: visible;
@@ -280,10 +283,6 @@ h5 {
   transition: all 0.3s ease-in;
 }
 
-
-
-
-
 .info {
     width: 100%;
     padding: 0 3rem;
@@ -292,7 +291,7 @@ h5 {
     position: absolute;
     transform-origin: 50% 50%;
     /* left: 50%; */
-    top: 420px;
+    top: 450px;
     transition: all 0.3s ease-in;
   }
 
@@ -304,7 +303,7 @@ h5 {
     line-height: 26px;
     height: 0px;
     position: absolute;
-    bottom: 15rem;
+    bottom: 21rem;
     left: 50%;
     transform: translate(-50%, 0);
     z-index: 10;
@@ -317,10 +316,11 @@ h5 {
     color: #6d6d6d;
     font-size: 15px;
     line-height: 15px;
-    width: 100%;
+    /* width: 100%; */
     position: absolute;
-    bottom: 10px;
-    right: -2rem;
+    bottom: 35px;
+    transform-origin: center;
+    left: calc(50% - 9.7rem);
     z-index: 2;
     opacity: 0.4;
     transition: all 0.15s linear;
@@ -342,10 +342,38 @@ h5 {
   position: relative;
   margin-right: 2rem;
 }
+
+.music_subtitle {
+  opacity: 0.4;
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  letter-spacing: 0.1rem;
+  line-height: 2.6rem;
+  font-weight: 300;
+  /* margin: 10%; */
+}
+
+.length {
+  display: none;
+}
+
+.nr {
+  margin-left: -1rem;
+}
+
 }
 
 
 @media only screen and (min-width: 901px) {
+
+  .music_subtitle {
+    opacity: 0.4;
+    font-size: 1.4rem;
+    margin-top: 2rem;
+    letter-spacing: 0.1rem;
+    line-height: 2.6rem;
+    font-weight: 300;
+}
 
 .screen > #magicButton:checked ~ .info h4 {
   text-align: center;
@@ -483,7 +511,7 @@ h5 {
         text-align: center;
         position: absolute;
         bottom: 30rem;
-        left: 70vw;
+        left: calc(50% + 20vw);
         width: 30rem;
         margin-left: -3.5rem;
         transition: all 0.3s ease-in;
@@ -953,14 +981,7 @@ audio {
     letter-spacing: 0.3rem;
 }
 
-.music_subtitle {
-    opacity: 0.4;
-    font-size: 1.4rem;
-    margin-top: 2rem;
-    letter-spacing: 0.1rem;
-    line-height: 2.6rem;
-    font-weight: 300;
-}
+
 
 .active-song > td > h6 {
   color: #FF3568;
