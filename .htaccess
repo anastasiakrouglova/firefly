@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^accumulation.be [NC]
+RewriteRule ^(.*)$ http://www.accumulation.be/$1 [L,R=301]

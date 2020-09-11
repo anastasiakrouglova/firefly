@@ -4,15 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accumulation | Album release</title>
+    <title>Accumulation band | Firefly (album release 2020)</title>
     <meta name="language" content="en">
-    <meta name="description" content="Accumulation releases new album 'Firefly'"/>
+    <meta name="description" content="Accumulation is a Belgian band that released their first album Firefly on 31 October 2020. A game of poetry creates a double foundation for almost every song. It’s up to you to find the meaning, or just to enjoy the music."/>
     <link rel="stylesheet" href="src/sass/reset.css">
     <link rel="stylesheet" href="src/sass/style.css">
     <link rel="stylesheet" href="src/sass/musicplayer.css">
     <link rel="stylesheet" href="src/sass/dot.css">
     <link rel="stylesheet" href="dist/bundle.css">
     <link rel="icon" href="./src/assets/img/logo.ico"> 
+    <link rel="canonical" href="https://accumulation.be/"/>
     <script src="dist/bundle.js"></script>
 </head>
 <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/b681e3601f3f623ff4611311f/4beee291f49cb8bff9c5b44f3.js");</script>
@@ -34,7 +35,7 @@
                 <a class="white-nav navbar" href="#band">The members</a>
                 <a class="white-nav navbar" href="#contact">Contact us</a>
             </nav>
-            <img class="logo-nav" src="/src/assets/img/icons/logoWhite.png" alt="logo">
+            <img class="logo-nav" src="/src/assets/img/icons/logo.svg" alt="logo" width=50>
             <div class="div-header-home">
                 <div class="headertext-div">
                     <h3 class="accumulation_homepage__title">Accumulation</h3>
@@ -89,9 +90,9 @@
                     <h3 class="music_subtitle">“Thoughts are like candles, the wax will disappear"</h3>
                 </div>   
                     <table class="player">
-                        <td><input type="checkbox" id="backward" onclick="toggleBackward()"/><label class="backward" for="backward"></label></td>
-                        <td><input type="checkbox" id="play" title="Play" onclick="togglePlayPause()"/><label class="play" for="play"></label></td>
-                        <td><input type="checkbox" id="forward" onclick="toggleForward()"/><label class="forward" for="forward"></label></td>
+                        <td><input type="checkbox" id="backward"/><label class="backward" for="backward"></label></td>
+                        <td><input type="checkbox" id="play" title="Play" /><label class="play" for="play"></label></td>
+                        <td><input type="checkbox" id="forward"/><label class="forward" for="forward"></label></td>
                     </table>                          
                     <table class="footer-player">
                         <td><a class="music__link" target="_blank" href=""><img src="/src/assets/img/icons/spotify.svg" alt="spotify" height=22></a></td>
@@ -130,7 +131,7 @@
             </article>
             <article class="credits_container">
                 <h3 class="hide">Credits</h3>
-                <input class="credits__input" type="checkbox" id="credits" name="credits" onclick="toggleCredits()">
+                <input class="credits__input" type="checkbox" id="credits" name="credits">
                 <label class="credits__label fade-in" for="credits">Show credits</label>            
                 <!-- <label class="credits__label" for="credits">Show credits <img class="dropdown" src="/src/assets/img/icons/down.svg" alt=""></label>       -->
                 <div class="credits_info credit_false">
@@ -180,10 +181,8 @@
         <article class="contact__article article__footer">
             <h2 class="h2_footer">Contact us</h2>
             <p class="text__footer">Send us some hugs, kind messages or offers for concerts ❤️</p>
-            <p class="contact-mail__footer">contact@accumulation.be</p>
-            <p class="contact-mail__footer number__footer">+32 489 433 414</p>
+            <p class="contact-mail__footer">contact<img class="at_mail" src="/src/assets/img/icons/at.svg" alt="at">accumulation.be</p>
         </article>
-        <!-- <article class="footer-div_sm"> -->
         <article class="music__article article__footer">
             <h2 class="h2_footer">Music Distribution</h2>
             <div class="sm-div__footer">
@@ -199,9 +198,9 @@
             <h2>© 2020 Accumulation  |   All right reserved</h2>
         </article>
     </footer>
+    <script src="./src/javascript/music.js"></script>
     <script src="./src/javascript/particles.js"></script>
     <script src="./src/javascript/particle-header.js"></script>
-    <script src="./src/javascript/music.js"></script>
 </body>
 
 </html>

@@ -165,9 +165,6 @@ h5 {
 
   .youtube-link {
     height: 80rem;
-    background-image: url('/src/assets/img/home/max.jpg');
-    background-position: center;
-    object-fit: cover;
   }
 
   .screen {
