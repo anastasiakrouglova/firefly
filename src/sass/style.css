@@ -86,9 +86,9 @@ nav > a {
 }
 
 .footer {
-  height: 100vh;
   color: white;
-  height: 100vh;
+  height: 70rem;
+  margin-top: 6rem;
   position: relative;
   z-index: 1;
   grid-gap: 2rem;
@@ -1171,7 +1171,7 @@ top: 0;
 .credits_info {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-  width: 80vw;
+  width: 83vw;
   grid-template-areas: "records"
   "thanks"
   "mixing"
@@ -1490,7 +1490,6 @@ top: 0;
   z-index: 3;
 }
 
-
 .portfolio-link {
   color: #8477E3;
   border: 0.1rem solid #8477E3;
@@ -1550,6 +1549,7 @@ top: 0;
  font-weight: 600;
  letter-spacing: 0.04rem;
  margin-top: 2rem;
+ line-height: 3rem;
 }
 
 .credits_btn {
@@ -1648,4 +1648,17 @@ top: 0;
 
 .theArtists {
   margin-top: 10rem;
+}
+
+
+
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.4s ease-in;
+}
+
+.fade-in.appear {
+  opacity: 1;
+  
 }

@@ -1,12 +1,3 @@
-/* PRESS THE MENU BUTTON FOR ANIMATION */
-/* PRESS PLAY BUTTON TO LISTEN THE DEMO SONG */
-
-/* As seen on: "https://dribbble.com/shots/2144866-Day-5-Music-Player-Rebound/" */
-
-/* THANK YOU! */
-
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
-
 body {
   background-color: #152634;;
   padding: 0;
@@ -58,59 +49,6 @@ body {
   }
 }
 
-/* h2 {
-  margin: 0;
-  padding: 0;
-  font-size: 10px;
-  line-height: 10px;
-  letter-spacing: 2.5px;
-  font-family: 'Open Sans';
-  font-weight: 700;
-  color: #fff;
-} */
-
-/* h3 {
-  margin: 0;
-  padding: 0;
-  font-size: 11px;
-  line-height: 11px;
-  font-family: 'Open Sans';
-  font-weight: 400;
-  color: #777;
-}
-
-h4 {
-  margin: 0 0 5px 29px;
-  padding: 0;
-  font-size: 14px;
-  line-height: 14px;
-  font-family: 'Open Sans';
-  font-weight: 700;
-  color: #fff;
-}
-
-h5 {
-  margin: 0;
-  padding: 0;
-  font-size: 13px;
-  line-height: 13px;
-  font-family: 'Open Sans';
-  font-weight: 700;
-  color: #6d6d6d;
-}
-
-h6 {
-  margin: 0;
-  padding: 0;
-  font-size: 13px;
-  line-height: 13px;
-  font-family: 'Open Sans';
-  font-weight: 700;
-  color: #f0f0f0;
-} */
-
-
-
 .header {
   display: inline-flex;
   margin: 0 0 40px 0;
@@ -151,8 +89,6 @@ label.main:hover:before {
 
 
 .coverImage {
-  /* background: url('/src/assets/img/home/firefly_cover.jpg') no-repeat; */
-  /* background-size: cover; */
   width: 100%;
   height: 366px;
   padding: 0;
@@ -192,19 +128,40 @@ h5 {
   padding-top: 1.8rem;
 }
 
+@media only screen and (max-width: 450px) {
+  .screen > #magicButton:checked ~ .info h3 {
+    opacity: 0;
+  }
+
+  .screen > #magicButton:checked ~ .info h4 {
+    text-align: left;
+    margin: 0 0 5px 0px;
+    margin-top: 3.2rem;
+    font-size: 16px;
+    color: #111111;
+    transition: all 0.3s ease-in;
+  }
+}
+
+@media only screen and (max-width: 900px) and (min-width: 451px) {
+  .screen > #magicButton:checked ~ .info h4 {
+    text-align: left;
+    margin: 0 0 5px 0px;
+    margin-top: 1rem;
+    font-size: 16px;
+    color: #111111;
+    transition: all 0.3s ease-in;
+  }
+}
+
 @media only screen and (max-width: 900px) {
   .music__link {
     margin: 2rem;
   }
 
-.screen > #magicButton:checked ~ .info h4 {
-  text-align: left;
-  margin: 0 0 5px 0px;
-  margin-top: 1rem;
-  font-size: 16px;
-  color: #111111;
-  transition: all 0.3s ease-in;
-}
+  .screen > #magicButton:checked ~ .info h3 {
+    margin-top: 1rem;
+  }
 
   .youtube-link {
     height: 80rem;
@@ -222,7 +179,6 @@ h5 {
     left: 50%;
     top: 0;
     transform: translate(-50%, 0);
-    /* box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4); */
     overflow: hidden;
   }
 
@@ -250,7 +206,7 @@ h5 {
     width: 366px;
     height: 366px;
     left: 23px;
-    top: 60px;
+    top: 80px;
     transition: all 0.3s ease-in;
     border-radius: 20px;
   }
@@ -277,10 +233,11 @@ h5 {
 
 .screen > #magicButton:checked ~ .info {
   margin-left: 0rem;
-  top: 66px;
-  left: 126px;
+  top: 82px;
+  left: 106px;
   text-align: left;
   transition: all 0.3s ease-in;
+  width: 80%;
 }
 
 .info {
@@ -290,7 +247,6 @@ h5 {
     text-align: center;
     position: absolute;
     transform-origin: 50% 50%;
-    /* left: 50%; */
     top: 450px;
     transition: all 0.3s ease-in;
   }
@@ -333,7 +289,6 @@ h5 {
     object-fit: cover;
   }
 
-
 .song{
   display: flex;
   margin-top: 1rem;
@@ -346,11 +301,10 @@ h5 {
 .music_subtitle {
   opacity: 0.4;
   font-size: 1.4rem;
-  margin-top: 2rem;
+  margin-top: 3rem;
   letter-spacing: 0.1rem;
   line-height: 2.6rem;
   font-weight: 300;
-  /* margin: 10%; */
 }
 
 .length {
@@ -360,7 +314,6 @@ h5 {
 .nr {
   margin-left: -1rem;
 }
-
 }
 
 
@@ -369,7 +322,7 @@ h5 {
   .music_subtitle {
     opacity: 0.4;
     font-size: 1.4rem;
-    margin-top: 2rem;
+    margin-top: 4rem;
     letter-spacing: 0.1rem;
     line-height: 2.6rem;
     font-weight: 300;
@@ -409,13 +362,10 @@ h5 {
     left: 50%;
     top: 0;
     transform: translate(-50%, 0);
-    /* box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4); */
     overflow: hidden;
   }
 
     .coverImage {
-        /* background: url('/src/assets/img/covers/square/oneDay.jpg') no-repeat; */
-        /* background-size: cover; */
         width: 20rem;
         height: 100vh;
         padding: 0;
@@ -433,11 +383,13 @@ h5 {
         color: #fff;
         font-size: 26px;
         line-height: 26px;
-        /* width: 216px; */
         height: 0px;
         position: absolute;
-        bottom: 22rem;
-        left: 78.5vw;
+        bottom: 26rem;
+        /* left: 78.5vw; */
+        left: calc(50% + 20vw + 11rem);
+        /* width: 30rem; */
+        /* margin-left: -3.5rem; */
         transform: translate(-50%, 0);
         z-index: 10;
         transition: all 0.3s ease-in;
@@ -450,7 +402,6 @@ h5 {
         text-align: center;
         transition: all 0.1s ease-in;
       }
-
 
       .cover-single {
         width: 50vw;
@@ -506,7 +457,6 @@ h5 {
       }
 
       .info {
-        /* width: 157px; */
         color: white;
         text-align: center;
         position: absolute;
@@ -531,33 +481,21 @@ h5 {
         opacity: 0.4;
         transition: all 0.15s linear;
         transition: bottom 0.3s linear;
-      }
-      
+      } 
 }
 
-
-
 .screen > #magicButton:checked ~ .songImage {
-  /* transform: scale(0.251, 0.251); */
   opacity: 0;
-  /* width: 366px;
-  height: 366px;
-  left: 23px; */
   top: -60px; 
   transition: all 0.2s ease-in;
   border-radius: 20px;
 }
-
 
 .image-cover {
   border-radius: 50%;
   margin-bottom: 4rem;
   opacity: 1;
 }
-
-/* .player > tbody > tr {
- padding-left: 3rem;
-} */
 
 .screen > #magicButton:checked ~ .image-cover {
   opacity: 0;
@@ -580,9 +518,6 @@ h5 {
 .search:hover:before {
   color: #bbb;
 }
-
-
-
 
 .list {
   border-spacing: 0px 2px;
@@ -634,8 +569,6 @@ h5 {
   width: 210px;
   transition: all 0.11s ease-in;
 }
-
-
 
 .screen > #magicButton:checked ~ table tr:nth-child(1) {
   opacity: 1;
@@ -778,7 +711,6 @@ td > #heart8:checked ~ label.zmr:before {
 }
 
 .bar {
-  /* background: url('http://imgh.us/bar_3.svg') no-repeat; */
   background-size: 100%;
   width: 320px;
   height: 21px;
@@ -796,23 +728,9 @@ td > #heart8:checked ~ label.zmr:before {
   transition: all 0.3s ease-in;
 }
 
-/* .screen {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  align-items: center;
-} */
-
-
-
-
-
 .screen > #magicButton:checked ~ .info h3 {
     color: #111111;
 }
-
-
 
 .player td {
   /* width: 72px; */
@@ -875,8 +793,6 @@ td > #play:checked ~ label.play:before {
   transition: all 0.15s linear;
 }
 
-
-
 .shadow {
   background: 192737;
   width: 100%;
@@ -884,10 +800,7 @@ td > #play:checked ~ label.play:before {
   position: absolute;
   bottom: -12px;
   left: 0;
-  /* box-shadow: 0px -15px 40px rgba(17, 17, 17, 0.8); */
 }
-
-
 
 .love:before {
   content: "\f08a";
@@ -971,7 +884,6 @@ audio {
   display: none;
 }
 
-
 .music_title {
     text-transform: uppercase;
     margin: 0;
@@ -979,18 +891,15 @@ audio {
     margin-bottom: 1rem;
     font-size: 2.2rem;
     letter-spacing: 0.3rem;
+    line-height: 2.2rem;
 }
-
-
 
 .active-song > td > h6 {
   color: #FF3568;
 }
 
 .not-active-song {
-
 }
-
 
 .activeAudio {
   display: none;

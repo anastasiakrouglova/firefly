@@ -3,8 +3,9 @@
     let activeSong;
     let $audioIsActive;
     let currentSongName = "Hazard";
-    let currentQuote = "You don't have to be afraid, all those shadows are nothing but a dream.";
-    let currentSongImage = "hazard"
+    let currentQuote = "Don't to be afraid, all those shadows are nothing but a dream";
+    let currentSongImage = "hazard";
+    let allAudios = [];
 
     const playpause = document.getElementById("play");
     const songlist = document.querySelector(`.list`);
@@ -12,8 +13,10 @@
     const $currentQuote = document.querySelector(`.music_subtitle`);
     const $currentSongImage = document.querySelector(`.coverImage`);
 
+
+    const faders = document.querySelectorAll(`.fade-in`);
+
     function togglePlayPause() {
-        
         if ($audioIsActive !== undefined) {
             if (activeSong.paused || activeSong.ended) {
                 playpause.title = "Pause";
@@ -22,7 +25,6 @@
                 playpause.title = "Play";
                 activeSong.pause();
             }
-            
         } else {
             const firstSong = document.querySelector(`.not-activeAudio`);
 
@@ -96,7 +98,7 @@
         $tr.innerHTML = 
         ` <td class="nr"><h5>${song.id}<h5></td>
         <td class="title"><h6 class="songtitle">${song.title}<h6></td>
-        <td class="length"><h5>${song.duration}<h5></td>
+        
         <td><audio onended="checkIfEnded()" preload="auto" id="audio" class="activeAudio"><source src="src/assets/audio/${song.song}.wav"></audio></td>
         `
 
@@ -104,6 +106,57 @@
 
         $audioIsActive = $activeAudio;
         $audioIsActive.play();
+        console.log($audioIsActive);
+
+        // DIT IN APARTE FUNCTIE SCHRIJVEN EN DIE FUNCTIE INVULLEN IPV SONG.DURATION! AANTAL RETURNEN.
+
+        
+        // // if (timeleft == "NaN:NaN" || NaN || undefined || null) {
+        // //     console.log('aaii');
+        // //     timeleft.innerHTML = "wacht";
+        // // }
+
+        // $audioIsActive.addEventListener("timeupdate", function () {
+        //     let timeleft = document.querySelector(`.songduration`);
+        //     console.log(timeleft.innerHTML)
+
+        //     let s = parseInt($audioIsActive.currentTime % 60);
+        //     let m = parseInt(($audioIsActive.currentTime / 60) % 60);
+
+
+        //     duration = parseInt($audioIsActive.duration);
+        //     currentTime = parseInt( $audioIsActive.currentTime ),
+            
+        //     timeLeft = duration - currentTime,
+        //         s, m;
+            
+        //     // if (s < 10) {
+        //     //     timeline.innerHTML = m + ':0' + s;
+        //     // }
+        //     // else {
+        //     //     timeline.innerHTML = m + ':' + s;
+        //     // }
+            
+        //     s = timeLeft % 60;
+        //     m = Math.floor( timeLeft / 60 ) % 60;
+            
+        //     s = s < 10 ? "0"+s : s;
+        //     m = m < 10 ? "0"+m : m;
+            
+        //     if (m == NaN && s == NaN) {
+        //         timeleft.innerHTML = "niks"
+        //     } else {
+        //         timeleft.innerHTML =  m + ":" + s;
+                
+        //     }
+            
+        //     // if (timeleft.innerHTML == `NaN:NaN`) {
+        //     //     console.log('aaaa')
+        //     //     timeleft.innerHTML = "aaa";
+        //     // }
+            
+        //     console.log(timeleft);
+        // }, false)
 
         let $notActiveAudios = document.querySelectorAll(`.not-activeAudio`);
         $notActiveAudios.forEach(notActiveAudio => {
@@ -136,56 +189,73 @@
         if (activeSong != null) {
             toggleForward()
         }
-        
-    }
-
-    function songDuration() {
-        // let songDurations = document.querySelectorAll(`.not-activeAudio`);
-
-        // songDurations.forEach(songDuration => {
-            
-        //     songDuration.onloadedmetadata = function() {
-        //         console.log(songDuration.duration);
-                
-        //         //return songDuration.duration;
-        //         return "10";
-        //     };
-        // })
-
-        return duration;
     }
 
     function showSonglist(songs) {
+
         songs.forEach(song => {
             const $tr = document.createElement(`tr`);
 
             $tr.classList.add(`not-active-song`);
             $tr.classList.add(`song`);
             $tr.id = song.id;
+
             $tr.innerHTML =
-                ` <td class="nr"><h5>${song.id}<h5></td>
+            ` <td class="nr"><h5>${song.id}<h5></td>
               <td class="title"><h6 class="songtitle">${song.title}<h6></td>
-              <td class="length"><h5>${song.duration}<h5></td>
               <td><audio onended="checkIfEnded()" preload="auto" id="audio" class="not-activeAudio" controls><source src="src/assets/audio/${song.song}.wav"></audio></td>
               `
-        
+              
             songlist.appendChild($tr);
-
 
             $tr.addEventListener('click', () => {
                 checkIfOld();
-
+                
                 $tr.classList.remove(`not-active-song`);
                 $tr.classList.add(`active-song`);
                 
                 letTheMusicPlay($tr, song);
             })
+  
+    
+            // $songaudios.forEach(songaudio => {
+            //     songaudio.onloadedmetadata = function () {
+            //         console.log(songaudio.duration);
+            //         let $songduration = songaudio.duration;
+            //     }
+    
+            //     console.log($songaudios);
+    
+            // })
+
+            //getSongDuration();
 
         });
 
         const $firstTr = document.querySelector(`.not-active-song`);
         $firstTr.classList.add(`active-song`);
         $firstTr.classList.remove(`not-active-song`);
+
+        // // DIT WERKT VOOR EERSTE ITEM
+        // let $songduration = document.querySelector(`.songduration`);
+        // let $songaudio = document.querySelector(`.not-activeAudio`);
+
+        // $songaudio.onloadedmetadata = function () {
+        //     $songduration.innerHTML = $songaudio.duration;
+        // }
+
+
+        // let $songdurations = document.querySelectorAll(`.songduration`);
+        // let $songaudios = document.querySelectorAll(`.not-activeAudio`);
+
+
+        // allemaal opslaan als values in openbare array en ze dan via i = 0, ++ opvragen.
+        // $songaudios.forEach(songaudio => {
+        //     songaudio.onloadedmetadata = function () {
+        //         console.log(songaudio.duration);
+        //         allAudios.push(songaudio.duration);
+        //     }
+        // });
     }
 
     const showCurrentSongname = () => {
@@ -201,7 +271,6 @@
           .then(jsonData => {
             allSongs = jsonData;
             showSonglist(allSongs);
-
           });
     }
 
@@ -209,27 +278,48 @@
         const creditCheck = document.querySelector(`.credits__input`);
         const creditInfo = document.querySelector(`.credits_info`);
         const creditLabel = document.querySelector(`.credits__label`);
-        //console.log('qmlsjfqlms');
 
         if (creditCheck.checked) {
             creditInfo.classList.remove(`credit_false`);
             creditInfo.classList.add(`credit_true`);
-            // creditLabel.innerHTML = `hide credits <img class="dropdown" src="/src/assets/img/icons/up.svg" alt="">`
             creditLabel.innerHTML = `hide credits`
         } else {
             creditInfo.classList.add(`credit_false`);
             creditInfo.classList.remove(`credit_true`);
             creditLabel.innerHTML = `show credits`
-            // creditLabel.innerHTML = `show credits <img class="dropdown" src="/src/assets/img/icons/down.svg" alt="">`
         }
     }
 
+    const appearOptions = {
+        threshold: 1,
+        rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver
+        (function (
+            entries,
+            appearOnScroll
+        ) { 
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('appear');
+                    appearOnScroll.unobserve(entry.target);
+                }
+            })
+        },
+        appearOptions);
+    
 
     const init = () => {
     console.log('hey code stalker x');
     initFetch();
     showCurrentSongname();
-        
+
+    faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+    })
   };
   init();
 }
@@ -237,3 +327,34 @@
 
 
 
+
+        // audio.addEventListener("timeupdate", function() {
+        //     var timeleft = document.getElementById('timeleft'),
+        //         duration = parseInt( audio.duration ),
+        //         currentTime = parseInt( audio.currentTime ),
+        //         timeLeft = duration - currentTime,
+        //         s, m;
+            
+            
+        //     s = timeLeft % 60;
+        //     m = Math.floor( timeLeft / 60 ) % 60;
+            
+        //     s = s < 10 ? "0"+s : s;
+        //     m = m < 10 ? "0"+m : m;
+            
+        //     timeleft.innerHTML = m+":"+s;
+            
+        // }, false);
+        
+        // Countup
+        // audio.addEventListener("timeupdate", function() {
+        //     var timeline = document.getElementById('duration');
+        //     var s = parseInt(audio.currentTime % 60);
+        //     var m = parseInt((audio.currentTime / 60) % 60);
+        //     if (s < 10) {
+        //         timeline.innerHTML = m + ':0' + s;
+        //     }
+        //     else {
+        //         timeline.innerHTML = m + ':' + s;
+        //     }
+        // }, false);

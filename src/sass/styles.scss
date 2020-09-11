@@ -1,18 +1,3 @@
-// @font-face {
-//     font-family: OpenSans;
-//     src: url('../fonts/OpenSans-Regular.ttf');
-// }
-
-// body {
-//     min-height: 100vh;
-//     //background: rgb(94, 0, 58);
-//     color: white;
-//     // background-image: url('../images/cat.jpg');
-//     background-position: center;
-//     background-repeat: no-repeat;
-// }
-
-
 // Settings
 $read-more: (
   'rows': 7,
@@ -27,7 +12,6 @@ $read-more: (
 
 // Optimal height based on your font size and line-height
 $read-more-height: map-get($read-more, 'font-size') * map-get($read-more, 'line-height') * (map-get($read-more, 'rows') + 1); // + 1 for trigger
-
 
 .read-more {
   position: relative;

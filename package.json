@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@johh/three-effectcomposer": "0.0.7",
+    "aos": "^3.0.0-beta.6",
     "imagesloaded": "^4.1.4",
     "simple-input-events": "^2.0.0",
     "three": "^0.119.1",
