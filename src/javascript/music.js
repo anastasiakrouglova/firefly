@@ -124,7 +124,13 @@
 
         $currentSongname.innerHTML = currentSongName;
         $currentQuote.innerHTML = currentQuote;
-        $currentSongImage.innerHTML = `<img class="cover-single" src="/src/assets/img/covers/square/${currentSongImage}.jpg" alt="${currentSongImage}">`
+        $currentSongImage.innerHTML = `
+        <picture class="cover-single">
+            <source media="(max-width: 500px)" srcset="/src/assets/img/covers/small/${currentSongImage}.jpg, /src/assets/img/covers/small/${currentSongImage}@2x.jpg 2x">
+            <source media="(max-width: 2000px)" srcset="/src/assets/img/covers/large/${currentSongImage}.jpg, /src/assets/img/covers/large/${currentSongImage}@2x.jpg 2x">
+            <img class="cover-single" src="/src/assets/img/covers/square/${currentSongImage}.jpg" alt="${currentSongImage}">
+        </picture>
+        `
 
         if ($activeAudio.play) {
             playStatus = document.getElementById(`play`)
@@ -174,7 +180,15 @@
     const showCurrentSongname = () => {
         $currentSongname.innerHTML = currentSongName;
         $currentQuote.innerHTML = currentQuote;
-        $currentSongImage.innerHTML = `<img class="cover-single" src="/src/assets/img/covers/square/${currentSongImage}.jpg" alt="${currentSongImage}">`
+        $currentSongImage.innerHTML = `
+        <picture class="cover-single">
+            <source media="(max-width: 500px)" srcset="/src/assets/img/covers/small/${currentSongImage}.jpg, /src/assets/img/covers/small/${currentSongImage}@2x.jpg 2x">
+            <source media="(max-width: 900px)" srcset="/src/assets/img/covers/medium/${currentSongImage}.jpg, /src/assets/img/covers/medium/${currentSongImage}@2x.jpg 2x">
+            <source media="(max-width: 2000px)" srcset="/src/assets/img/covers/large/${currentSongImage}.jpg, /src/assets/img/covers/large/${currentSongImage}@2x.jpg 2x">
+            <img class="cover-single" src="/src/assets/img/covers/square/${currentSongImage}.jpg" alt="${currentSongImage}">
+        </picture>
+        `
+        //<img class="cover-single" src="/src/assets/img/covers/square/${currentSongImage}.jpg" alt="${currentSongImage}">
     }
 
     const initFetch = () => {
@@ -205,7 +219,6 @@
 
     const appearOptions = {
         threshold: 0.5,
-        //rootMargin: "0px 0px -20px 0px"
     };
 
     const appearOnScroll = new IntersectionObserver
@@ -241,13 +254,10 @@
         const backward = document.getElementById(`backward`);
         backward.addEventListener("click", toggleBackward);
         
-
-
-    faders.forEach(fader => {
-        appearOnScroll.observe(fader);
-    })
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        })
         
-
   };
   init();
 }

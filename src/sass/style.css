@@ -28,6 +28,10 @@ body {
   justify-content: center;
 }
 
+.comingSoon {
+  font-size: 4rem;
+}
+
 canvas { 
 	display: block; 
 	position: fixed;
@@ -87,29 +91,32 @@ nav > a {
 
 .footer {
   color: white;
-  height: 70rem;
+  height: 50rem;
   position: relative;
   z-index: 1;
   grid-gap: 2rem;
   display: grid;
-  grid-template-rows: 6rem 1fr 1fr 2rem;
-  grid-template-columns: 10% 30% auto 30% 10% ;
-  grid-template-areas:  ". . . . ."
-  ". donate . contact ."
-  ". donate . music ."
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 2rem 40% auto 40% 2rem;
+  grid-template-areas:
+  ". discover . contactje ."
+  ". follow . contactje .";
+  margin: 0 auto;
+  max-width: 80rem;
+  margin-top: 13rem;
 }
 
-.donate__article {
-  grid-area: donate;
+.discover__article {
+  grid-area: discover;
 }
 
 .contact__article {
-  grid-area: contact;
+  grid-area: contactje;
 }
 
-.music__article {
+/* .music__article {
   grid-area: music;
-}
+} */
 
 .text__footer {
   line-height: 2.9rem;
@@ -971,14 +978,7 @@ top: 0;
     padding: 1rem;
   }
 
-  .article__footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    max-width: 30rem;
-    margin: auto;
-  }
+
 
   .nav_onepager {
     display: none;
@@ -1008,20 +1008,7 @@ top: 0;
     position: absolute;
   }
 
-  .footer {
-    height: 130rem;
-    color: white;
-    position: relative;
-    z-index: 1;
-    grid-gap: 0;
-    display: grid;
-    grid-template-rows: 6rem auto auto auto 2rem;
-    grid-template-columns: 1rem 1fr 1rem;
-    grid-template-areas:  ". . ."
-    ". donate ."
-    ". contact ."
-    ". music .";
-  }
+
 
 
 .card-image__footer {
@@ -1029,9 +1016,9 @@ top: 0;
   margin-top: 3rem;
 }
 
-.music__article {
+/* .music__article {
   margin-top: 6rem;
-}
+} */
 
 .artists_container {
   max-width: 60rem;
@@ -1063,24 +1050,19 @@ top: 0;
 
 
 @media only screen and (max-width: 319px) {
-  .footer {
+  /* .footer {
     height: 130rem;
     color: white;
     position: relative;
     z-index: 1;
     grid-gap: 0;
     display: grid;
-    grid-template-rows: 6rem auto auto auto 2rem;
+    grid-template-rows: 6rem auto auto 2rem;
     grid-template-columns: 0.5rem 1fr 0.5rem;
     grid-template-areas:  ". . ."
     ". donate ."
     ". contact ."
-    ". music .";
-  }
-
-  .card-image__footer {
-    width: 90vw;
-  }
+  } */
 
   .copyright {
     text-align: center;
@@ -1097,10 +1079,60 @@ top: 0;
   .broodtekst-style {
     padding: 2rem 3rem 3rem 3rem;
   }
+}
 
+@media only screen and (max-width: 589px){
+  .footer {
+    height: 90rem;
+    color: white;
+    position: relative;
+    z-index: 1;
+    grid-gap: 0;
+    display: grid;
+    grid-template-rows: 30rem 20rem 20rem;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "discover"
+    "follow"
+    "contactje"
+  }
+
+  .article__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 35rem;
+    margin: auto;
+  }
 
 }
 
+@media only screen and (max-width: 710px) and (min-width: 590px){
+  .footer {
+    height: 60rem;
+    color: white;
+    position: relative;
+    z-index: 1;
+    grid-gap: 2rem;
+    display: grid;
+    grid-template-rows: 20rem 20rem;
+    grid-template-columns: 2rem 1fr 1fr 2rem;
+    grid-template-areas:
+    ". discover follow ."
+    ". contactje contactje .";
+    margin-top: 10rem;
+  }
+
+  .article__footer {
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center;
+    text-align: center; */
+    /* max-width: 35rem; */
+  }
+
+}
 @media only screen and (max-width: 910px) and (min-width: 415px){
     .section-firefly {
     height: 130vh;
@@ -1120,29 +1152,8 @@ top: 0;
     margin-bottom: 8rem;
   }
 
-  .footer {
-    height: 120rem;
-    color: white;
-    position: relative;
-    z-index: 1;
-    grid-gap: 2rem;
-    display: grid;
-    grid-template-rows: 6rem 1fr 1fr 1fr 2rem;
-    grid-template-columns: 5% 1fr 5% ;
-    grid-template-areas:  ". . ."
-    ". donate ."
-    ". contact ."
-    ". music ."
-  }
 
-  .article__footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    max-width: 30rem;
-    margin: auto;
-  }
+
 
   .artists_container {
     max-width: 90rem;
@@ -1360,10 +1371,14 @@ top: 0;
 
 .sm-div__footer {
   margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-content: center;
+  width: 25rem;
 }
 
 .sm-div__footer > a {
-  margin-right: 2rem;
   opacity: 0.8;
   transition: 0.2s opacity;
 }
@@ -1414,8 +1429,8 @@ top: 0;
 }
 
 .contact-mail__footer {
-  font-size: 1.7rem;
-  font-weight: 500;
+  font-size: 2rem;
+  font-weight: 600;
   margin-top: 3rem;
 }
 
@@ -1464,8 +1479,6 @@ top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  bottom: 0;
   width: 100%;
   font-size: 1.3rem;
 }
@@ -1479,7 +1492,7 @@ top: 0;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
   margin-bottom: 1rem;
-  font-size: 2.2rem;
+  font-size: 1.5rem;
   font-weight: 500;
   line-height: 3rem;
 }
@@ -1621,10 +1634,12 @@ top: 0;
 
 
 .infoCopyright {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   letter-spacing: 0.03rem;
   text-align:center;
   margin-top: 2rem;
+  line-height: 3rem;;
+  max-width: 50rem;
 }
 
 .copyrightinfo__div {
@@ -1662,8 +1677,12 @@ top: 0;
 }
 
 .at_mail {
-  margin-bottom: -0.7rem;
+  margin-bottom: -0.3rem;
   margin-left: 0.2rem;
   margin-right: 0.2rem;
   height: 120%;
+}
+
+.follow__article {
+  grid-area: follow;
 }
